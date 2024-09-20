@@ -1,0 +1,49 @@
+/* src/components/Planet.css */
+
+.planet {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    background-size: 134px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(35deg) scale(0.25);
+}
+
+.planet.final {
+    opacity: 1;
+    transform: var(--planet-transform) rotate(0) scale(1);
+    transition: transform 600ms cubic-bezier(.79,.14,.31,1.16);
+}
+
+.planet:hover {
+    transform: var(--planet-transform) scale(1.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+.planet img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* margin-bottom: 10px; */
+}
+
+@media (max-width: 768px) {
+    .planet {
+        width: 65px;
+        height: 65px;
+    }
+
+    .planet img {
+        width: 50px;
+        height: 50px;
+    }
+}

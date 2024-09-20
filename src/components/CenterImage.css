@@ -1,0 +1,36 @@
+/* src/components/CenterImage.css */
+.center-image {
+    position: relative; /* Changed from absolute to relative */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1); /* Light background to simulate glass */
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Border for glass effect */
+    overflow: hidden;
+    pointer-events: none;
+}
+  
+  .glass-orb {
+    position: relative;
+    width: 180px; /* Smaller than the container to give the orb effect */
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3); /* Inner shadow to simulate depth */
+  }
+  
+  .glass-orb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Ensures the image is circular */
+  }
+  
