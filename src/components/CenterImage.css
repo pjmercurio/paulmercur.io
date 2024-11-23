@@ -13,24 +13,34 @@
     border: 2px solid rgba(255, 255, 255, 0.2); /* Border for glass effect */
     overflow: hidden;
     pointer-events: none;
+    transition: all 600ms cubic-bezier(.79,.14,.31,1.16);
+}
+
+.center-image.small {
+    pointer-events: all;
+    cursor: pointer;
+    transform: scale(0.6);
+}
+
+.center-image:hover {
+    transform: scale(0.65);
 }
   
-  .glass-orb {
-    position: relative;
-    width: 180px; /* Smaller than the container to give the orb effect */
-    height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3); /* Inner shadow to simulate depth */
-  }
-  
-  .glass-orb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%; /* Ensures the image is circular */
-  }
-  
+.glass-orb {
+  position: relative;
+  width: 180px; /* Smaller than the container to give the orb effect */
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3); /* Inner shadow to simulate depth */
+}
+
+.glass-orb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Ensures the image is circular */
+}

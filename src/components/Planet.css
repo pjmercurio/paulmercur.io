@@ -15,13 +15,20 @@
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
     transform: translate(-50%, -50%) rotate(35deg) scale(0.25);
+    transition: all 600ms cubic-bezier(.79,.14,.31,1.16);
 }
 
 .planet.final {
     opacity: 1;
     transform: var(--planet-transform) rotate(0) scale(1);
-    transition: transform 600ms cubic-bezier(.79,.14,.31,1.16);
+    pointer-events: auto;
+}
+
+.planet.animate-to-center {
+    transform: translate(0, 0) scale(0.5);
 }
 
 .planet:hover {
@@ -34,6 +41,18 @@
     height: 60px;
     border-radius: 50%;
     /* margin-bottom: 10px; */
+}
+
+.planet::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(174deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    pointer-events: none;
 }
 
 @media (max-width: 768px) {
